@@ -24,3 +24,8 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/DockerApp3/Dockerfile'
         tags: |
           $(tag)
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: 'Kubernetes/k8deploy'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
