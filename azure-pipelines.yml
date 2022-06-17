@@ -26,6 +26,6 @@ stages:
           $(tag)
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: 'Kubernetes/k8deploy'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
