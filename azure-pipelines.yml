@@ -24,11 +24,4 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/DockerApp3/Dockerfile'
         tags: |
-          $(tag)    
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'drop'
-        publishLocation: 'Container'
-      # Build a Docker image
-      # https://docs.microsoft.com/azure/devops/pipelines/languages/docker      
+          $(tag)
